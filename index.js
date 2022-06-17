@@ -7,7 +7,7 @@ let button = 0;
 
 
 function start(){
-    button++;
+    button++; //Condicional para bloquear mais de um clique no botão, impedindo contagem adulterada
     if(button<2){
     cronometro =  setInterval(() => { timer();}, tempo);
     }

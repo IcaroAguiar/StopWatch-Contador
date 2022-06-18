@@ -5,55 +5,99 @@ let min = 0;
 let sec = 0;
 let button = 0;
 
-
-function start(){
-    button++; //Condicional para bloquear mais de um clique no botão, impedindo contagem adulterada
-    if(button<2){
-    cronometro =  setInterval(() => { timer();}, tempo);
-    }
-
-
+if (hh < 10) {
+  hh = "0" + hh;
+}
+if (min < 10) {
+  min = "0" + min;
+}
+if (sec < 10) {
+  sec = "0" + sec;
 }
 
-function stop(){
-    button = 0;
-    clearInterval(cronometro);
-    hh = hh;
-    min = min;
-    sec = sec;
-
+function start() {
+  button++; //Condicional para bloquear mais de um clique no botão, impedindo contagem adulterada
+  if (button < 2) {
+    cronometro = setInterval(() => {
+      timer();
+    }, tempo);
+  }
 }
 
-function reset(){
-    button=0;
-    clearInterval(cronometro);
+function stop() {
+  button = 0;
+  clearInterval(cronometro);
+  hh = hh;
+  min = min;
+  sec = sec;
+}
 
-    hh = 0;
-    min = 0;
+function reset() {
+  button = 0;
+  clearInterval(cronometro);
+
+  hh = 0;
+  min = 0;
+  sec = 0;
+
+  document.getElementById("hora").innerText = hh;
+  document.getElementById("minutos").innerText = min;
+  document.getElementById("segundos").innerText = sec;
+}
+
+function timer() {
+  sec++;
+
+  if (sec == 60) {
     sec = 0;
+    min++;
 
-    document.getElementById('hora').innerText = hh
-    document.getElementById('minutos').innerText = min
-    document.getElementById('segundos').innerText = sec
+    if (min == 60) {
+      min = 0;
+      hr++;
+    }
+  }
+
+
+  document.getElementById("hora").innerText = hh;
+  document.getElementById("minutos").innerText = min;
+  document.getElementById("segundos").innerText = sec;
 }
 
-function timer(){
-    sec++;
+function watch() {
+  clearInterval(cronometro);
+  relogio = setInterval(() => {
+    timer_watch();
+  }, tempo);
+  document.getElementById("botoes").style.display = "none"; // some a div do cronometro
+}
 
-    if(sec == 60){
-        sec = 0;
-        min++;
+function counter() {
+  clearInterval(relogio);
+  clearInterval(cronometro);
+  reset();
+  hh = 0;
+  min = 0;
+  sec = 0;
+  document.getElementById("botoes").style.display = "block"; //aparece a div do cronometro
+}
+function timer_watch() {
+  let data = new Date();
+  let hora = data.getHours();
+  let minutos = data.getMinutes();
+  let segundos = data.getSeconds();
 
-        if(min==60){
-            min =0;
-            hr++;
-        }
+  if (hora < 10) {
+    hora = "0" + hora;
+  }
+  if (segundos < 10) {
+    segundos = "0" + segundos;
+  }
+  if (minutos < 10) {
+    minutos = "0" + minutos;
+  }
 
-    }
-    document.getElementById('hora').innerText = hh
-    document.getElementById('minutos').innerText = min
-    document.getElementById('segundos').innerText = sec
-
-
-
+  document.getElementById("hora").innerText = hora;
+  document.getElementById("minutos").innerText = minutos;
+  document.getElementById("segundos").innerText = segundos;
 }

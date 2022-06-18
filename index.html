@@ -1,41 +1,48 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
     <title>StopWatch App</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="relogio">
-    <div>
-            <span id="hora">00</span>
-            <p>Horas</p>  
-        </div>
-        <div>
-            <span id="minutos">00</span>
-            <p>Min</p>  
-        </div>
-        <div>
-            <span id="segundos">00</span>
-            <p>Seg</p>  
-        </div>
+      <div>
+        <span id="hora">00</span>
+        <p>Horas</p>
+      </div>
+      <div>
+        <span id="minutos">00</span>
+        <p>Min</p>
+      </div>
+      <div>
+        <span id="segundos">00</span>
+        <p>Seg</p>
+      </div>
 
-        <script src="index.js"></script>
-</div>
+      <script src="index.js"></script>
+    </div>
 
-<div class="botoes">
-    <div>
-        <button class= "button" onclick="start()">START</button>
+    <div class="botoes" id="botoes">
+      <div>
+        <button class="button" onclick="start()" >START</button>
+      </div>
+      <div>
+        <button class="button" onclick="stop()" >STOP</button>
+      </div>
+      <div>
+        <button class="button" onclick="reset()" >RESET</button>
+      </div>
     </div>
-    <div>
-        <button class= "button"  onclick="stop()">STOP</button>
+    <div class="watchtype">
+      <div>
+        <button class="watch" onclick="counter()">CRONÔMETRO</button>
+      </div>
+      <div>
+        <button class="watch" onclick="watch(),atualizarRelogio()">RELÓGIO</button>
+      </div>
     </div>
-    <div>
-        <button class= "button" onclick="reset()">RESET</button>
-    </div>
-</div>
-
-</body>
+  </body>
 </html>

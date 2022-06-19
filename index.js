@@ -65,10 +65,12 @@ function timer() {
 }
 
 function watch() {
-  clearInterval(cronometro);
   relogio = setInterval(() => {
     timer_watch();
   }, tempo);
+  
+  clearInterval(cronometro);
+ 
   document.getElementById("botoes").style.display = "none"; // some a div do cronometro
 }
 

@@ -24,6 +24,7 @@ body {
   border: 5px double #2f94e4;
   transition: 0.5s;
   margin-right: 3%;
+  position: fixed;
   
 }
 
@@ -63,6 +64,10 @@ body {
   margin-top: 5px;
   
 }
+.botoes{
+  position: fixed;
+  left: 1000px;
+}
 .button:hover {
   background-color: #2f94e4;
   box-shadow: 0 0 100px #2f94e4;
@@ -77,15 +82,18 @@ body {
   height: 30px;
   font-size: 15px;
   position: relative;
-  left: -420px;
+  left: -70px;
   bottom: 240px;
   margin-left: 5px;
 }
 .watchtype {
   display: flex;
+  position: fixed;
+  left: 630px;
 }
 .watch:hover {
   background-color: #2f94e4;
   box-shadow: 0 0 100px #2f94e4;
   transition: 0.5s;
 }
+

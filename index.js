@@ -100,3 +100,20 @@ function timer_watch() {
   document.getElementById("minutos").innerText = minutos;
   document.getElementById("segundos").innerText = segundos;
 }
+
+function alarm(){
+  // const music = new Audio('adf.wav');
+  // music.play();
+  // music.loop =true;   **Uso do Objeto Audio**
+  // music.playbackRate = 2;
+  // music.pause();qqazszdgfbgtyj
+  // timer_alarm()
+}
+function timer_alarm(){
+  // if(5 ands comparando as datas para validação ){
+  //   tocar alarme
+  // }
+  // if(botao desligar alarme){
+  //   desligo alarme
+  // }
+}

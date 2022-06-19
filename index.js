@@ -56,7 +56,7 @@ function timer() {
       min = 0;
       hh++;
     }
-  }
+  } 
 
 
   document.getElementById("hora").innerText = hh;
@@ -78,9 +78,6 @@ function counter() {
   clearInterval(relogio);
   clearInterval(cronometro);
   reset();
-  hh = 0;
-  min = 0;
-  sec = 0;
   document.getElementById("botoes").style.display = "block"; //aparece a div do cronometro
 }
 function timer_watch() {

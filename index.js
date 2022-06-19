@@ -54,7 +54,7 @@ function timer() {
 
     if (min == 60) {
       min = 0;
-      hr++;
+      hh++;
     }
   }
 
